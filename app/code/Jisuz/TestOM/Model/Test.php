@@ -10,7 +10,7 @@ class Test
     private $number;
 
     public function __construct(
-        \Jisuz\TestOM\Model\Manager $manager,
+        \Jisuz\TestOM\Model\ManagerInterface $manager,
         string $name,
         int $number,
         array $arrayList

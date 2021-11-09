@@ -1,12 +1,15 @@
 <?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Jisuz\TestOM\Model\ManagerInterface" type="Jisuz\TestOM\Model\ManagerCustom" />
     <type name="Jisuz\TestOM\Model\Test">
         <arguments>
             <argument name="arrayList" xsi:type="array">
-                <item name="item1" xsi:type="string">Random word</item>
+                <item name="item1" xsi:type="string">Custom Random word</item>
                 <item name="item2" xsi:type="number">777</item>
             </argument>
-            <argument name="name" xsi:type="string">Vlad</argument>
+            <argument name="name" xsi:type="string">Custom Vlad</argument>
             <argument name="number" xsi:type="number">1510</argument>
         </arguments>
     </type>
