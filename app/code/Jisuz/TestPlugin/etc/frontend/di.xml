@@ -5,4 +5,7 @@
     <type name="Magento\Framework\UrlInterface">
         <plugin name="test_plugin" type="Jisuz\TestPlugin\Plugin\Model\Url" />
     </type>
+    <type name="Magento\Framework\View\Element\Template">
+        <plugin name="training_test" type="Jisuz\TestPlugin\Plugin\Block\Template" />
+    </type>
 </config>
