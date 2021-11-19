@@ -8,14 +8,17 @@ class Test
     private $arrayList;
     private $name;
     private $number;
+    private $managerFactory;
 
     public function __construct(
         \Jisuz\TestOM\Model\ManagerInterface $manager,
+        \Jisuz\TestOM\Model\ManagerInterfaceFactory $managerFactory,
         string $name,
         int $number,
         array $arrayList
     ) {
         $this->manager = $manager;
+        $this->managerFactory = $managerFactory;
         $this->arrayList = $arrayList;
         $this->name = $name;
         $this->number = $number;
@@ -30,6 +33,9 @@ class Test
         echo $this->name;
         echo "<br/>\n";
         echo $this->number;
+        echo "<br/>\n";
+        $newmanager = $this->managerFactory->create();
+        echo print_r(get_class($newmanager));
         echo "<br/>\n";
     }
 }
