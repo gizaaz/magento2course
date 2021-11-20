@@ -2,10 +2,13 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="Magento\Framework\UrlInterface">
-        <plugin name="test_plugin" type="Jisuz\TestPlugin\Plugin\Model\Url" />
-    </type>
-    <type name="Magento\Framework\View\Element\Template">
-        <plugin name="training_test" type="Jisuz\TestPlugin\Plugin\Block\Template" />
+<!--    <type name="Magento\Framework\UrlInterface">-->
+<!--        <plugin name="test_plugin" type="Jisuz\TestPlugin\Plugin\Model\Url" />-->
+<!--    </type>-->
+<!--    <type name="Magento\Framework\View\Element\Template">-->
+<!--        <plugin name="training_test" type="Jisuz\TestPlugin\Plugin\Block\Template" />-->
+<!--    </type>-->
+    <type name="Magento\Catalog\Controller\Product\View">
+        <plugin name="training_test" type="Jisuz\TestPlugin\Plugin\Controller\Product\View" />
     </type>
 </config>
