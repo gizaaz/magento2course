@@ -3,4 +3,7 @@
     <event name="controller_action_predispatch">
         <observer name="test_observer" instance="Jisuz\TestObserver\Observer\RedirectToLogin" />
     </event>
+    <event name="controller_front_send_response_before">
+        <observer name="test_observer_log" instance="Jisuz\TestObserver\Observer\LogPageHtml" />
+    </event>
 </config>
