@@ -6,5 +6,8 @@
         <route id="test" frontName="test_routing">
             <module name="Jisuz_TestRouting"/>
         </route>
+        <route id="test2" frontName="test_ajax">
+            <module name="Jisuz_TestRouting" before="Magento_Cms"/>
+        </route>
     </router>
 </config>
