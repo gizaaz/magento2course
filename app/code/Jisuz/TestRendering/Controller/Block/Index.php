@@ -21,7 +21,7 @@ class Index implements \Magento\Framework\App\ActionInterface
     public function execute()
     {
         $layout = $this->layoutFactory->create();
-        $block = $layout->createBlock('Jisuz\TestRendering\Block\Test');
+        $block = $layout->createBlock(\Jisuz\TestRendering\Block\Test::class);
         $resultRaw = $this->resultRawFactory->create($this->resultRawFactory::TYPE_RAW);
         return $resultRaw->setContents($block->toHtml());
     }
