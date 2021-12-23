@@ -3,4 +3,11 @@
     <referenceContainer name="content.top">
         <block class="Magento\Framework\View\Element\Template" name="topinfo" template="Jisuz_TestRendering::topinfo.phtml"/>
     </referenceContainer>
+    <referenceContainer name="content">
+        <block class="Magento\Framework\View\Element\Template" name="testargument" template="Jisuz_TestRendering::attributes.phtml">
+            <arguments>
+                <argument name="background_color" xsi:type="string">lightskyblue</argument>
+            </arguments>
+        </block>
+    </referenceContainer>
 </page>
