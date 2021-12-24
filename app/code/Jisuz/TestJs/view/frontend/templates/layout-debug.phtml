@@ -1,0 +1,13 @@
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+?>
+
+<script type="text/x-magento-init">
+{
+    "*": {
+            "Jisuz_TestJs/js/layout-debug": {
+            "xml": <?= json_encode($block->getLayout()->getXmlString()) ?>
+        }
+    }
+}
+</script>
