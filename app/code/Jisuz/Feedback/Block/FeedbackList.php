@@ -7,6 +7,7 @@ use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
 use Jisuz\Feedback\Model\ResourceModel\Feedback\Collection;
 use Jisuz\Feedback\Model\ResourceModel\Feedback\CollectionFactory;
+use Jisuz\Feedback\Model\ResourceModel\Feedback;
 
 class FeedbackList extends Template
 {
@@ -27,6 +28,11 @@ class FeedbackList extends Template
     private $collection;
 
     /**
+     * @var Feedback
+     */
+    private $feedbackResource;
+
+    /**
      * FeedbackList constructor.
      * @param Context $context
      * @param CollectionFactory $collectionFactory
@@ -37,10 +43,12 @@ class FeedbackList extends Template
         Context $context,
         CollectionFactory $collectionFactory,
         Timezone $timezone,
+        Feedback $feedbackResource,
         array $data = []
     ) {
         $this->collectionFactory = $collectionFactory;
         $this->timezone = $timezone;
+        $this->feedbackResource = $feedbackResource;
         parent::__construct($context, $data);
     }
 
@@ -83,5 +91,21 @@ class FeedbackList extends Template
     public function getFeedbackDate($feedback)
     {
         return $this->timezone->formatDateTime($feedback->getCreationTime());
+    }
+
+    /**
+     * @return string
+     */
+    public function getActiveFeedbackNumber()
+    {
+        return $this->feedbackResource->getActiveFeedbackNumber();
+    }
+
+    /**
+     * @return string
+     */
+    public function getAllFeedbackNumber()
+    {
+        return $this->feedbackResource->getAllFeedbackNumber();
     }
 }
